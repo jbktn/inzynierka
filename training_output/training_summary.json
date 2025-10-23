@@ -1,0 +1,14 @@
+{
+  "start_time": "2025-10-22T20:20:09.802063",
+  "end_time": "2025-10-22T20:25:37.736037",
+  "duration_seconds": 327.933974,
+  "duration_formatted": "0:05:27.933974",
+  "total_epochs": 27,
+  "best_epoch": 12,
+  "best_val_loss": 0.01912306807935238,
+  "best_val_mae": 0.09667523205280304,
+  "final_train_loss": 0.012359406799077988,
+  "final_val_loss": 0.029581574723124504,
+  "device": "/CPU:0",
+  "gpu_available": false
+}

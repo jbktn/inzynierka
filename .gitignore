@@ -1,0 +1,4 @@
+/data
+/training_output/moisture_data.csv
+/training_output/best_model.h5
+tests.ipynb

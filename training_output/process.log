@@ -1,0 +1,15 @@
+[2025-10-22 16:40:32] Test operacji: 0:00:00.500079
+[2025-10-22 16:48:36] Test operacji: 0:00:00.500148
+[2025-10-22 16:50:19] Wczytywanie danych REMEDHUS: 0:00:01.889591
+[2025-10-22 16:51:41] Wyszukiwanie obrazów satelitarnych: 0:00:00.000197
+[2025-10-22 19:15:55] Test operacji: 0:00:00.500124
+[2025-10-22 19:16:04] Wczytywanie danych REMEDHUS: 0:00:01.760624
+[2025-10-22 19:21:16] Wczytywanie danych REMEDHUS: 0:00:10.910530
+[2025-10-22 19:22:17] Wyszukiwanie obrazów satelitarnych: 0:00:00.001401
+[2025-10-22 20:00:50] Test operacji: 0:00:00.500233
+[2025-10-22 20:01:09] Wczytywanie danych REMEDHUS: 0:00:15.889336
+[2025-10-22 20:01:28] Wyszukiwanie obrazów satelitarnych: 0:00:00.001904
+[2025-10-22 20:16:09] Dopasowanie obrazów do pomiarów: 0:06:17.437154
+[2025-10-22 20:17:41] Tworzenie datasetu: 0:00:06.462112
+[2025-10-22 20:33:22] Pre-trenowanie CNN: 0:00:34.223132
+[2025-10-22 20:34:01] Ekstrakcja cech: 0:00:00.952592
