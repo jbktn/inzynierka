@@ -27,3 +27,19 @@
 [2025-10-28 23:31:12] Test operacji: 0:00:00.500099
 [2025-10-28 23:31:29] Wczytywanie danych REMEDHUS: 0:00:12.089235
 [2025-10-28 23:31:45] Wyszukiwanie obraz贸w satelitarnych: 0:00:00.001209
+[2025-10-28 23:45:55] Test operacji: 0:00:00.502568
+[2025-10-28 23:46:07] Wczytywanie danych REMEDHUS: 0:00:11.795649
+[2025-10-28 23:46:32] Wyszukiwanie obraz贸w satelitarnych: 0:00:00.000862
+[2025-10-28 23:46:55] Wyszukiwanie obraz贸w satelitarnych: 0:00:00.000354
+[2025-10-28 23:47:13] Test operacji: 0:00:00.500092
+[2025-10-28 23:47:26] Wczytywanie danych REMEDHUS: 0:00:11.432331
+[2025-10-28 23:47:31] Wyszukiwanie obraz贸w satelitarnych: 0:00:00.000287
+[2025-10-28 23:48:27] Wyszukiwanie obraz贸w satelitarnych: 0:00:00.001285
+[2025-10-29 00:19:47] Test operacji: 0:00:00.500691
+[2025-10-29 00:20:11] Wczytywanie danych REMEDHUS: 0:00:14.148659
+[2025-10-29 00:20:14] Wyszukiwanie obraz體 satelitarnych: 0:00:00.004544
+[2025-10-29 00:44:40] Dopasowanie obraz體 do pomiar體: 0:24:02.794245
+[2025-10-29 00:44:55] Tworzenie datasetu: 0:00:03.369880
+[2025-10-29 00:45:34] Tworzenie datasetu: 0:00:19.821618
+[2025-10-29 00:49:56] Pre-trenowanie CNN: 0:04:00.178496
+[2025-10-29 00:50:09] Ekstrakcja cech: 0:00:02.109892

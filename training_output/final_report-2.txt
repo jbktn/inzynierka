@@ -1,0 +1,100 @@
+================================================================================
+RAPORT KOŃCOWY - PREDYKCJA WILGOTNOŚCI GLEBY (CNN+XGBOOST)
+================================================================================
+
+Data: 2025-10-29 00:51:59
+Projekt: Soil Moisture Prediction using Planet Labs + CNN+XGBoost
+
+--------------------------------------------------------------------------------
+1. DATASET
+--------------------------------------------------------------------------------
+Łączna liczba próbek: 1,404
+   - Train: 982 (69.9%)
+   - Validation: 211 (15.0%)
+   - Test: 211 (15.0%)
+
+Rozmiar patcha: 64×64 pikseli
+Liczba kanałów: 8 (Planet Labs)
+
+Zakres wilgotności: [0.0117, 0.4023] m³/m³
+Średnia wilgotność: 0.1354 ± 0.0908 m³/m³
+
+--------------------------------------------------------------------------------
+2. ARCHITEKTURA MODELU
+--------------------------------------------------------------------------------
+Model hybrydowy: CNN + XGBoost Gradient Boosting
+
+CNN (Feature Extractor):
+   - 4 bloki konwolucyjne
+   - 3 warstwy max pooling
+   - 1 warstwa fully connected (128 cech)
+   - Batch Normalization i Dropout
+
+XGBoost (Regressor):
+   - Gradient Boosting
+   - Max depth: 6
+   - Learning rate: 0.05
+   - Max trees: 1000
+
+--------------------------------------------------------------------------------
+3. TRENOWANIE
+--------------------------------------------------------------------------------
+Pre-trenowanie CNN: 30 epok
+   Best validation loss: 0.012713
+
+Trenowanie XGBoost: 61 iteracji (early stopping)
+   Max iterations: 1000
+
+--------------------------------------------------------------------------------
+4. WYNIKI NA ZBIORZE TESTOWYM
+--------------------------------------------------------------------------------
+RMSE:  0.0313 m³/m³
+MAE:   0.0209 m³/m³
+R²:    0.8994
+MAPE:  30.10%
+Bias:  -0.0039 m³/m³
+
+--------------------------------------------------------------------------------
+5. PORÓWNANIE Z LITERATURĄ
+--------------------------------------------------------------------------------
+
+Model                          R²           MAE          RMSE         Dataset                       
+------------------------------------------------------------------------------------------------
+Hegazi_et_al_2023              0.7094       0.0277       0.0418       Sentinel-2 (OzNet + WegenerNet)
+Celik_et_al_2022               0.8700       0.0330       0.0460       Sentinel-1 + SMAP             
+This_study                     0.8994       0.0209       0.0313       Planet Labs (REMEDHUS)        
+
+--------------------------------------------------------------------------------
+6. WNIOSKI
+--------------------------------------------------------------------------------
+✓✓ Doskonały współczynnik determinacji (R² > 0.85)
+✓✓ Bardzo niski średni błąd bezwzględny (MAE < 0.03)
+✓ Bardzo niski bias systemowy
+
+Model hybrydowy (CNN+XGBoost) łączy zalety obu podejść:
+- CNN wychwytuje wzorce przestrzenne w obrazach satelitarnych
+- XGBoost zapewnia precyzyjne predykcje na wyekstraktowanych cechach
+- Rezultat: model mniej podatny na overfitting, szybsze trenowanie
+
+--------------------------------------------------------------------------------
+7. REKOMENDACJE
+--------------------------------------------------------------------------------
+• Rozszerzyć dataset na więcej sezonów i lat
+• Testować inne architektury CNN (ResNet, EfficientNet)
+• Dodać dane meteorologiczne (temperatura, opady)
+• Implementować transfer learning z pretrenowanych modeli
+• Ensemble learning - połączyć predykcje wielu modeli
+• Kalibracja modelu dla konkretnych regionów
+
+--------------------------------------------------------------------------------
+8. ARTEFAKTY
+--------------------------------------------------------------------------------
+Raporty:            f:\inzynierka\training_output/
+Modele:             cnn_feature_extractor.h5, xgboost_model.json
+Wykresy:            f:\inzynierka\training_output\plots/
+Dane treningowe:    moisture_data.csv
+Predykcje testowe:  test_predictions_detailed.csv
+
+================================================================================
+KONIEC RAPORTU
+================================================================================

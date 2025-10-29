@@ -1,0 +1,58 @@
+{
+  "metadata": {
+    "date": "2025-10-29T00:51:59.205549",
+    "project": "Soil Moisture Prediction CNN+XGBoost",
+    "model_type": "Hybrid"
+  },
+  "dataset": {
+    "total_samples": 1404,
+    "train_samples": 982,
+    "val_samples": 211,
+    "test_samples": 211,
+    "patch_size": 64,
+    "num_bands": 8,
+    "moisture_range": [
+      0.011699999682605267,
+      0.40230000019073486
+    ],
+    "moisture_mean": 0.13541032373905182,
+    "moisture_std": 0.09084034711122513
+  },
+  "training": {
+    "model_type": "CNN+XGBoost_Hybrid",
+    "cnn_pretrain_epochs": 30,
+    "cnn_best_val_loss": 0.012713056989014149,
+    "xgboost_best_iteration": 61,
+    "xgboost_max_trees": 1000
+  },
+  "test_results": {
+    "rmse": 0.031340327113866806,
+    "mae": 0.020869476720690727,
+    "r2": 0.8993620872497559,
+    "mape": 30.101516842842102,
+    "bias": -0.003870525863021612
+  },
+  "literature_comparison": {
+    "Hegazi_et_al_2023": {
+      "R2": 0.7094,
+      "MAE": 0.0277,
+      "RMSE": 0.0418,
+      "dataset": "Sentinel-2 (OzNet + WegenerNet)",
+      "model": "CNN"
+    },
+    "Celik_et_al_2022": {
+      "R2": 0.87,
+      "RMSE": 0.046,
+      "MAE": 0.033,
+      "dataset": "Sentinel-1 + SMAP",
+      "model": "Deep Learning"
+    },
+    "This_study": {
+      "R2": 0.8993620872497559,
+      "MAE": 0.020869476720690727,
+      "RMSE": 0.031340327113866806,
+      "dataset": "Planet Labs (REMEDHUS)",
+      "model": "CNN+XGBoost_Hybrid"
+    }
+  }
+}
